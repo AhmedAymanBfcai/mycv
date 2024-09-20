@@ -5,5 +5,24 @@ Content-Type: application/json
 {
     "email": "ahmed@gmail.com",
     "password": "ahmed!@#",
-    "hacker/admin": "Will be ignored by whitelist: true"
+    "hacker/admin": "Will be ignored by setting whitelist: true"
+}
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/400
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=ahmed@gmail.com
+
+
+### Delete a User with a given id
+DELETE http://localhost:3000/auth/1
+
+
+### Update a User with a given id
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "email": "ahmed.ayman@gmail.com"
 }
