@@ -2,8 +2,11 @@ import { Controller, Post, Body, Get, Param, Patch, Query, Delete, NotFoundExcep
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UsersService } from './users.service';
 import { UpdateUserDto } from './dtos/update-user.dto';
+import { Serialize } from 'src/interceptors/serialize.interceptor';
+import { UserDto } from './dtos/user.dto';
 
-@Controller('auth') // prefix for all endpoints
+@Controller('auth')
+@Serialize(UserDto)
 export class UsersController {
     constructor(private usersService: UsersService ){}
 
@@ -19,6 +22,8 @@ export class UsersController {
         if(!user){
             throw new NotFoundException("User Not found")
         }
+
+        return user;
     }
 
     @Get()
