@@ -1,8 +1,8 @@
 // User DTO that desribes how to serialize a user for this particular route handler
-import { Expose, Exclude } from 'class-transformer';
+import { Expose } from 'class-transformer';
 
 export class UserDto {
-  @Exclude()
+  @Expose()
   id: number;
 
   @Expose()

@@ -3,9 +3,18 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "diaa@gmail.com",
-    "password": "ahmed!@#",
+    "email": "diaada@gmail.com",
+    "password": "ahmdedd!@#",
     "hacker/admin": "Will be ignored by setting whitelist: true"
+}
+
+### Sign in as an existing user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "diaada@gmail.com",
+    "password": "ahmdedd!@#"
 }
 
 ### Find a particular user with a given ID
@@ -13,6 +22,16 @@ GET http://localhost:3000/auth/2
 
 ### Find all users with a given email
 GET http://localhost:3000/auth?email=ahmed@gmail.com
+
+### Get the current signedin user
+GET http://localhost:3000/auth/me
+
+### Get the current signedin user
+GET http://localhost:3000/auth/whoiami
+
+
+### Sign out
+POST http://localhost:3000/auth/signout
 
 
 ### Delete a User with a given id 
@@ -25,4 +44,4 @@ Content-Type: application/json
 
 {
     "email": "ahmed.ayman@gmail.com"
-}
+} 
