@@ -3,7 +3,7 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "diaada@gmail.com",
+    "email": "fares@gmail.com",
     "password": "ahmdedd!@#",
     "hacker/admin": "Will be ignored by setting whitelist: true"
 }
@@ -13,7 +13,7 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-    "email": "diaada@gmail.com",
+    "email": "fares@gmail.com",
     "password": "ahmdedd!@#"
 }
 
