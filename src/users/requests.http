@@ -8,7 +8,7 @@ Content-Type: application/json
     "hacker/admin": "Will be ignored by setting whitelist: true"
 }
 
-### Sign in as an existing user
+### Sign in as an existing user!
 POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
